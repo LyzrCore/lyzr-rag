@@ -1,0 +1,42 @@
+SQLAlchemy[asyncio]>=1.4.49
+dataclasses-json
+deprecated>=1.2.9.3
+fsspec>=2023.5.0
+httpx
+nest-asyncio==1.5.8
+nltk==3.8.1
+numpy
+openai>=1.1.0
+pandas
+tenacity<9.0.0,>=8.2.0
+tiktoken>=0.3.3
+typing-extensions>=4.5.0
+typing-inspect>=0.8.0
+requests>=2.31.0
+aiohttp==3.8.6
+networkx>=3.0
+dirtyjson==1.0.8
+
+[:extra == "gradientai"]
+gradientai>=1.4.0
+
+[:extra == "langchain"]
+langchain>=0.0.303
+
+[:extra == "local-models"]
+optimum[onnxruntime]==1.13.2
+sentencepiece==0.1.99
+transformers[torch]==4.33.1
+
+[:extra == "postgres"]
+asyncpg==0.28.0
+pgvector==0.1.0
+psycopg2-binary==2.9.9
+
+[:extra == "query-tools"]
+guidance==0.0.64
+lm-format-enforcer==0.4.3
+jsonpath-ng==1.6.0
+rank-bm25==0.2.2
+scikit-learn
+spacy==3.7.1
