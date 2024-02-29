@@ -69,8 +69,7 @@ DEFAULT_OPENAI_MODEL = "gpt-3.5-turbo"
 class Tokenizer(Protocol):
     """Tokenizers support an encode function that returns a list of ints."""
 
-    def encode(self, text: str) -> List[int]:
-        ...
+    def encode(self, text: str) -> List[int]: ...
 
 
 class OpenAI(LLM):

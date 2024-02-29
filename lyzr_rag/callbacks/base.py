@@ -22,7 +22,7 @@ global_stack_trace_ids = ContextVar("trace_ids", default=empty_trace_ids)
 
 class CallbackManager(BaseCallbackHandler, ABC):
     """
-    Callback manager that handles callbacks for events within LyzrRag.
+    Callback manager that handles callbacks for events within LlamaIndex.
 
     The callback manager provides a way to call handlers on event starts/ends.
 

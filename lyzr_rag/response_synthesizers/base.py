@@ -7,6 +7,7 @@ Will support different modes, from 1) stuffing chunks into prompt,
 2) create and refine separately over each chunk, 3) tree summarization.
 
 """
+
 import logging
 from abc import abstractmethod
 from typing import Any, Dict, Generator, List, Optional, Sequence, Union

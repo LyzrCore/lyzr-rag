@@ -1,6 +1,6 @@
-"""Data Connectors for LyzrRag.
+"""Data Connectors for LlamaIndex.
 
-This module contains the data connectors for LyzrRag. Each connector inherits
+This module contains the data connectors for LlamaIndex. Each connector inherits
 from a `BaseReader` class, connects to a data source, and loads Document objects
 from that data source.
 

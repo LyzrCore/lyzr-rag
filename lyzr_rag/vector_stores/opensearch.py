@@ -1,4 +1,5 @@
 """Elasticsearch/Opensearch vector store."""
+
 import json
 import uuid
 from typing import Any, Dict, Iterable, List, Optional, Union, cast

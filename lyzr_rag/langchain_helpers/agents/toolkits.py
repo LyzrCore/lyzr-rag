@@ -1,4 +1,4 @@
-"""LyzrRag toolkit."""
+"""LlamaIndex toolkit."""
 
 from typing import List
 

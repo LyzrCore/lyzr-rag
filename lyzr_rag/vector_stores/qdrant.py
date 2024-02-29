@@ -4,6 +4,7 @@ Qdrant vector store index.
 An index that is built on top of an existing Qdrant collection.
 
 """
+
 import logging
 from typing import Any, List, Optional, Tuple, cast
 

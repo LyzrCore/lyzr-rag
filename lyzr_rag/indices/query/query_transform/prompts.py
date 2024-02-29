@@ -1,6 +1,5 @@
 """Query transform prompts."""
 
-
 from lyzr_rag.prompts.base import PromptTemplate
 from lyzr_rag.prompts.prompt_type import PromptType
 

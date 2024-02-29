@@ -1,6 +1,6 @@
 """Summary index.
 
-A simple data structure where LyzrRag iterates through document chunks
+A simple data structure where LlamaIndex iterates through document chunks
 in sequence in order to answer a given query.
 
 """

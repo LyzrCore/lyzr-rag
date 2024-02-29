@@ -1,4 +1,4 @@
-"""LyzrRag data structures."""
+"""LlamaIndex data structures."""
 
 # indices
 from lyzr_rag.indices.composability.graph import ComposableGraph

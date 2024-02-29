@@ -1,6 +1,5 @@
 """Autoretriever prompts."""
 
-
 from lyzr_rag.prompts.base import PromptTemplate
 from lyzr_rag.prompts.prompt_type import PromptType
 from lyzr_rag.vector_stores.types import (

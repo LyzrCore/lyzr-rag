@@ -1,24 +1,28 @@
-"""Init file of LyzrRag."""
+"""Init file of LlamaIndex."""
 
 from pathlib import Path
+
+with open(Path(__file__).absolute().parents[0] / "VERSION") as _f:
+    __version__ = _f.read().strip()
+
 
 import logging
 from logging import NullHandler
 from typing import Callable, Optional
 
 # import global eval handler
-from .callbacks.global_handlers import set_global_handler
+from lyzr_rag.callbacks.global_handlers import set_global_handler
 
 # response
-from .core.response.schema import Response
-from .data_structs.struct_type import IndexStructType
+from lyzr_rag.core.response.schema import Response
+from lyzr_rag.data_structs.struct_type import IndexStructType
 
 # embeddings
-from .embeddings import OpenAIEmbedding
+from lyzr_rag.embeddings import OpenAIEmbedding
 
 # indices
 # loading
-from .indices import (
+from lyzr_rag.indices import (
     ComposableGraph,
     DocumentSummaryIndex,
     GPTDocumentSummaryIndex,
@@ -43,17 +47,17 @@ from .indices import (
 )
 
 # structured
-from .indices.common.struct_store.base import SQLDocumentContextBuilder
+from lyzr_rag.indices.common.struct_store.base import SQLDocumentContextBuilder
 
 # prompt helper
-from .indices.prompt_helper import PromptHelper
-from .llm_predictor import LLMPredictor
+from lyzr_rag.indices.prompt_helper import PromptHelper
+from lyzr_rag.llm_predictor import LLMPredictor
 
 # token predictor
-from .llm_predictor.mock import MockLLMPredictor
+from lyzr_rag.llm_predictor.mock import MockLLMPredictor
 
 # prompts
-from .prompts import (
+from lyzr_rag.prompts import (
     BasePromptTemplate,
     ChatPromptTemplate,
     # backwards compatibility
@@ -61,28 +65,28 @@ from .prompts import (
     PromptTemplate,
     SelectorPromptTemplate,
 )
-from .readers import (
+from lyzr_rag.readers import (
     SimpleDirectoryReader,
     download_loader,
 )
 
 # Response Synthesizer
-from .response_synthesizers.factory import get_response_synthesizer
-from .schema import Document, QueryBundle
-from .service_context import (
+from lyzr_rag.response_synthesizers.factory import get_response_synthesizer
+from lyzr_rag.schema import Document, QueryBundle
+from lyzr_rag.service_context import (
     ServiceContext,
     set_global_service_context,
 )
 
 # storage
-from .storage.storage_context import StorageContext
-from .token_counter.mock_embed_model import MockEmbedding
+from lyzr_rag.storage.storage_context import StorageContext
+from lyzr_rag.token_counter.mock_embed_model import MockEmbedding
 
 # sql wrapper
-from .utilities.sql_wrapper import SQLDatabase
+from lyzr_rag.utilities.sql_wrapper import SQLDatabase
 
 # global tokenizer
-from .utils import get_tokenizer, set_global_tokenizer
+from lyzr_rag.utils import get_tokenizer, set_global_tokenizer
 
 # best practices for library logging:
 # https://docs.python.org/3/howto/logging.html#configuring-logging-for-a-library
@@ -151,7 +155,7 @@ __all__ = [
 ]
 
 # eval global toggle
-from .callbacks.base_handler import BaseCallbackHandler
+from lyzr_rag.callbacks.base_handler import BaseCallbackHandler
 
 global_handler: Optional[BaseCallbackHandler] = None
 

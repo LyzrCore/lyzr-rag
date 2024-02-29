@@ -1,4 +1,5 @@
 """DashScope api utils."""
+
 from http import HTTPStatus
 from typing import Any, Dict, List, Sequence
 
@@ -54,9 +55,11 @@ def create_dashscope_multi_modal_chat_message(
         for image_document in image_documents:
             content.append(
                 {
-                    "image": image_document.image_url
-                    if image_document.image_url is not None
-                    else image_document.image_path
+                    "image": (
+                        image_document.image_url
+                        if image_document.image_url is not None
+                        else image_document.image_path
+                    )
                 }
             )
         content.append({"text": prompt})

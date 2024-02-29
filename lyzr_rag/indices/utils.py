@@ -1,4 +1,5 @@
 """Utilities for GPT indices."""
+
 import logging
 import re
 from typing import Dict, List, Optional, Sequence, Set, Tuple

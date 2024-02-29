@@ -1,6 +1,5 @@
 """SQL Container builder."""
 
-
 from typing import Any, Dict, List, Optional, Type
 
 from lyzr_rag.indices.base import BaseIndex

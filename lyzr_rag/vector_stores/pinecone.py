@@ -4,6 +4,7 @@ Pinecone Vector store index.
 An index that is built on top of an existing vector store.
 
 """
+
 import logging
 from collections import Counter
 from functools import partial

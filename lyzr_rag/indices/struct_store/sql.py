@@ -1,4 +1,5 @@
 """SQL Structured Store."""
+
 from collections import defaultdict
 from enum import Enum
 from typing import Any, Optional, Sequence, Union

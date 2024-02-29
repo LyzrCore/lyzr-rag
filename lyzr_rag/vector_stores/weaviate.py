@@ -159,7 +159,7 @@ class WeaviateVectorStore(BasePydanticVectorStore):
         index_name = index_name or f"LlamaIndex_{uuid4().hex}"
         if not index_name[0].isupper():
             raise ValueError(
-                "Index name must start with a capital letter, e.g. 'LyzrRag'"
+                "Index name must start with a capital letter, e.g. 'LlamaIndex'"
             )
 
         # create default schema if does not exist

@@ -1,4 +1,4 @@
-"""Create LyzrRag agents."""
+"""Create LlamaIndex agents."""
 
 from typing import Any, Optional
 

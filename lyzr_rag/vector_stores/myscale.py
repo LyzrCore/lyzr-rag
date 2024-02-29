@@ -3,6 +3,7 @@
 An index that is built on top of an existing MyScale cluster.
 
 """
+
 import json
 import logging
 from typing import Any, Dict, List, Optional, cast

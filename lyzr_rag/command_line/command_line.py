@@ -86,7 +86,7 @@ def default_rag_cli() -> RagCLI:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="LyzrRag CLI tool.")
+    parser = argparse.ArgumentParser(description="LlamaIndex CLI tool.")
 
     # Subparsers for the main commands
     subparsers = parser.add_subparsers(title="commands", dest="command", required=True)

@@ -1,4 +1,5 @@
 """Mock LLM Predictor."""
+
 from typing import Any, Dict
 
 from deprecated import deprecated

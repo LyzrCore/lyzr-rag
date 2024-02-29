@@ -1,4 +1,5 @@
 """Google's hosted Gemini API."""
+
 import os
 import typing
 from typing import Any, Dict, Optional, Sequence

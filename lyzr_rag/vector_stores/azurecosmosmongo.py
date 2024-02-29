@@ -3,6 +3,7 @@
 An index that is built on top of an existing vector store.
 
 """
+
 import logging
 import os
 from typing import Any, Dict, List, Optional, cast

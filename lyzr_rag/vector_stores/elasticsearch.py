@@ -100,7 +100,7 @@ def _to_elasticsearch_filter(standard_filters: MetadataFilters) -> Dict[str, Any
     """Convert standard filters to Elasticsearch filter.
 
     Args:
-        standard_filters: Standard lyzr-rag filters.
+        standard_filters: Standard Llama-index filters.
 
     Returns:
         Elasticsearch filter.

@@ -1,4 +1,4 @@
-"""LyzrRag Tool classes."""
+"""LlamaIndex Tool classes."""
 
 from typing import Any, Dict, List
 
@@ -27,7 +27,7 @@ def _get_response_with_sources(response: RESPONSE_TYPE) -> str:
 
 
 class IndexToolConfig(BaseModel):
-    """Configuration for LyzrRag index tool."""
+    """Configuration for LlamaIndex index tool."""
 
     query_engine: BaseQueryEngine
     name: str
@@ -41,7 +41,7 @@ class IndexToolConfig(BaseModel):
 
 
 class LlamaIndexTool(BaseTool):
-    """Tool for querying a LyzrRag."""
+    """Tool for querying a LlamaIndex."""
 
     # NOTE: name/description still needs to be set
     query_engine: BaseQueryEngine

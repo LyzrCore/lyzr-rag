@@ -3,6 +3,7 @@
 An index that is built on top of multiple vector stores for different modalities.
 
 """
+
 import logging
 from typing import Any, List, Optional, Sequence, cast
 

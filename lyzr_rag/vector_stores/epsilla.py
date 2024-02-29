@@ -1,4 +1,5 @@
 """Epsilla vector store."""
+
 import logging
 from typing import Any, List, Optional
 

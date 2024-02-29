@@ -35,6 +35,7 @@ from lyzr_rag.llms.litellm_utils import (
 )
 from lyzr_rag.llms.llm import LLM
 from lyzr_rag.types import BaseOutputParser, PydanticProgramMode
+from lyzr_rag.core.llms.types import ChatMessage, MessageRole
 
 DEFAULT_LITELLM_MODEL = "gpt-3.5-turbo"
 
@@ -274,7 +275,7 @@ class LiteLLM(LLM):
 
                 yield ChatResponse(
                     message=ChatMessage(
-                        role=role,
+                        role=MessageRole.ASSISTANT,
                         content=content,
                         additional_kwargs=additional_kwargs,
                     ),
@@ -442,7 +443,7 @@ class LiteLLM(LLM):
 
                 yield ChatResponse(
                     message=ChatMessage(
-                        role=role,
+                        role=MessageRole.ASSISTANT,
                         content=content,
                         additional_kwargs=additional_kwargs,
                     ),

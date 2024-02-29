@@ -1,6 +1,5 @@
 """Structured LLM Predictor."""
 
-
 import logging
 from typing import Any, Optional
 

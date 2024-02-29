@@ -99,9 +99,11 @@ class Perplexity(LLM):
     @property
     def metadata(self) -> LLMMetadata:
         return LLMMetadata(
-            context_window=self.context_window
-            if self.context_window is not None
-            else self._get_context_window(),
+            context_window=(
+                self.context_window
+                if self.context_window is not None
+                else self._get_context_window()
+            ),
             num_output=self.max_tokens
             or -1,  # You can replace this with the appropriate value
             is_chat_model=self._is_chat_model(),

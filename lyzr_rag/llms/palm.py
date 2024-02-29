@@ -140,5 +140,5 @@ class PaLM(CustomLLM):
 
         """
         raise NotImplementedError(
-            "PaLM does not support streaming completion in LyzrRag currently."
+            "PaLM does not support streaming completion in LlamaIndex currently."
         )

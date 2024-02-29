@@ -1,6 +1,5 @@
 """Joint QA Summary graph."""
 
-
 from typing import Optional, Sequence
 
 from lyzr_rag.indices.list.base import SummaryIndex

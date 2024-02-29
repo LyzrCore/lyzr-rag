@@ -2,6 +2,7 @@
 
 An index that is built on top of an existing vector store.
 """
+
 import logging
 from typing import TYPE_CHECKING, Any, Dict, List, Optional
 

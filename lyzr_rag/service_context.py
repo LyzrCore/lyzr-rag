@@ -63,7 +63,7 @@ class ServiceContextData(BaseModel):
 class ServiceContext:
     """Service Context container.
 
-    The service context container is a utility container for LyzrRag
+    The service context container is a utility container for LlamaIndex
     index and query classes. It contains the following:
     - llm_predictor: BaseLLMPredictor
     - prompt_helper: PromptHelper

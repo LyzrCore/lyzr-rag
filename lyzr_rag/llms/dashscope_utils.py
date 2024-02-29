@@ -1,4 +1,5 @@
 """DashScope api utils."""
+
 from http import HTTPStatus
 from typing import Any, Dict, List, Sequence
 

@@ -2,6 +2,7 @@
 
 An index that is built on top of Alibaba Cloud's Tair database.
 """
+
 import logging
 from typing import TYPE_CHECKING, Any, Dict, List, Optional
 

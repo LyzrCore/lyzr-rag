@@ -1,6 +1,7 @@
 """
-Portkey integration with lyzr_rag for enhanced monitoring.
+Portkey integration with Llama_index for enhanced monitoring.
 """
+
 from typing import TYPE_CHECKING, Any, Callable, List, Optional, Sequence, Union, cast
 
 from lyzr_rag.bridge.pydantic import Field, PrivateAttr

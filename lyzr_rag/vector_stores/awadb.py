@@ -3,6 +3,7 @@
 An index that is built on top of an existing vector store.
 
 """
+
 import logging
 import uuid
 from typing import Any, List, Optional, Set

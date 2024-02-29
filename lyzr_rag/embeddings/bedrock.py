@@ -172,7 +172,7 @@ class BedrockEmbedding(BaseEmbedding):
         return "BedrockEmbedding"
 
     @deprecated(
-        version="0.9.48",
+        version="0.1.4",
         reason=(
             "Use the provided kwargs in the constructor, "
             "set_credentials will be removed in future releases."
@@ -241,7 +241,7 @@ class BedrockEmbedding(BaseEmbedding):
 
     @classmethod
     @deprecated(
-        version="0.9.48",
+        version="0.1.4",
         reason=(
             "Use the provided kwargs in the constructor, "
             "set_credentials will be removed in future releases."

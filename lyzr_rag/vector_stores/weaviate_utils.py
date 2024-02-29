@@ -1,6 +1,6 @@
-"""Weaviate-specific serializers for LyzrRag data structures.
+"""Weaviate-specific serializers for LlamaIndex data structures.
 
-Contain conversion to and from dataclasses that LyzrRag uses.
+Contain conversion to and from dataclasses that LlamaIndex uses.
 
 """
 

@@ -117,7 +117,7 @@ class GoogleVectorStore(BasePydanticVectorStore):
     stores_text: bool = True
     is_embedding_query: bool = False
 
-    # This is not the Google's corpus name but an ID generated in the LyzrRag
+    # This is not the Google's corpus name but an ID generated in the LlamaIndex
     # world.
     corpus_id: str = Field(frozen=True)
     """Corpus ID that this instance of the vector store is using."""

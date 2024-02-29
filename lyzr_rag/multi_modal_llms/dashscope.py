@@ -1,4 +1,5 @@
 """DashScope llm api."""
+
 from http import HTTPStatus
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 

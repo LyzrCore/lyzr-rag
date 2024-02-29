@@ -224,11 +224,11 @@ class RocksetVectorStore(VectorStore):
                 LIMIT
                     {query.similarity_top_k}
             """,
-            params={
-                filter.key: filter.value for filter in query.filters.legacy_filters()
-            }
-            if query.filters
-            else {},
+            params=(
+                {filter.key: filter.value for filter in query.filters.legacy_filters()}
+                if query.filters
+                else {}
+            ),
         )
 
         similarities: List[float] | None = [] if query.query_embedding else None

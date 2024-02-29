@@ -1,4 +1,4 @@
-"""LyzrRag objects."""
+"""LlamaIndex objects."""
 
 from lyzr_rag.objects.base import ObjectIndex, ObjectRetriever
 from lyzr_rag.objects.base_node_mapping import SimpleObjectNodeMapping

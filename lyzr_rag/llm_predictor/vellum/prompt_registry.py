@@ -18,7 +18,7 @@ if TYPE_CHECKING:
 class VellumPromptRegistry:
     """Registers and retrieves prompts with Vellum.
 
-    LyzrRag Prompts can be registered within Vellum, at which point Vellum becomes
+    LlamaIndex Prompts can be registered within Vellum, at which point Vellum becomes
     the source of truth for the prompt. From there, Vellum can be used for prompt/model
     experimentation, request monitoring, and more.
     """
@@ -35,14 +35,14 @@ class VellumPromptRegistry:
         self._vellum_client = Vellum(api_key=vellum_api_key)
 
     def from_prompt(self, initial_prompt: BasePromptTemplate) -> VellumRegisteredPrompt:
-        """Accepts a LyzrRag prompt and retrieves a corresponding registered prompt
+        """Accepts a LlamaIndex prompt and retrieves a corresponding registered prompt
         from Vellum.
 
-        If the LyzrRag prompt hasn't yet been registered, it'll be registered
+        If the LlamaIndex prompt hasn't yet been registered, it'll be registered
         automatically, after which point Vellum becomes the source-of-truth for the
         prompt's definition.
 
-        In this way, the LyzrRag prompt is treated as the initial value for the newly
+        In this way, the LlamaIndex prompt is treated as the initial value for the newly
         registered prompt in Vellum.
 
         You can reference a previously registered prompt by providing either
@@ -147,7 +147,7 @@ class VellumPromptRegistry:
             model=model,
             parameters=params,
             meta={
-                "source": "lyzrrag",
+                "source": "lyzr_rag",
                 "prompt_type": prompt.metadata["prompt_type"],
             },
         )
@@ -163,7 +163,7 @@ class VellumPromptRegistry:
 
     def _generate_default_label(self, prompt: BasePromptTemplate) -> str:
         prompt_type = prompt.metadata["prompt_type"]
-        return f"LyzrRag Demo: {prompt_type}'"
+        return f"LlamaIndex Demo: {prompt_type}'"
 
     def _generate_default_name(self, prompt: BasePromptTemplate) -> str:
         default_label = self._generate_default_label(prompt)
@@ -172,7 +172,7 @@ class VellumPromptRegistry:
     def _construct_prompt_info(
         self, prompt: BasePromptTemplate, for_chat_model: bool = True
     ) -> vellum.RegisterPromptPromptInfoRequest:
-        """Converts a LyzrRag prompt into Vellum's prompt representation."""
+        """Converts a LlamaIndex prompt into Vellum's prompt representation."""
         import vellum
 
         assert isinstance(prompt, PromptTemplate)

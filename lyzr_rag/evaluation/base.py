@@ -1,4 +1,5 @@
 """Evaluator."""
+
 import asyncio
 from abc import abstractmethod
 from typing import Any, Optional, Sequence

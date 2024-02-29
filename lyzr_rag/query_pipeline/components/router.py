@@ -1,6 +1,5 @@
 """Router components."""
 
-
 from typing import Any, Dict, List
 
 from lyzr_rag.bridge.pydantic import Field, PrivateAttr

@@ -1,4 +1,5 @@
 """DashVector Vector Store."""
+
 import logging
 from typing import Any, List, Optional, cast
 
@@ -107,11 +108,13 @@ class DashVectorStore(VectorStore):
                 Doc(
                     id=node.node_id,
                     vector=node.embedding,
-                    sparse_vector=self._encoder.encode_documents(
-                        node.get_content(metadata_mode=MetadataMode.EMBED)
-                    )
-                    if self._support_sparse_vector
-                    else None,
+                    sparse_vector=(
+                        self._encoder.encode_documents(
+                            node.get_content(metadata_mode=MetadataMode.EMBED)
+                        )
+                        if self._support_sparse_vector
+                        else None
+                    ),
                     fields=node_to_metadata_dict(
                         node, remove_text=False, flat_metadata=self.flat_metadata
                     ),

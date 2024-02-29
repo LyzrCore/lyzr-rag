@@ -20,7 +20,7 @@ from lyzr_rag.storage.docstore.registry import get_default_docstore
 
 
 class TreeIndexInserter:
-    """LyzrRag inserter."""
+    """LlamaIndex inserter."""
 
     def __init__(
         self,

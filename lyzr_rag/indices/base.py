@@ -21,7 +21,7 @@ logger = logging.getLogger(__name__)
 
 
 class BaseIndex(Generic[IS], ABC):
-    """Base LyzrRag.
+    """Base LlamaIndex.
 
     Args:
         nodes (List[Node]): List of nodes to index

@@ -9,7 +9,7 @@ from lyzr_rag.schema import Document
 class SimpleMongoReader(BaseReader):
     """Simple mongo reader.
 
-    Concatenates each Mongo doc into Document used by LyzrRag.
+    Concatenates each Mongo doc into Document used by LlamaIndex.
 
     Args:
         host (str): Mongo host.

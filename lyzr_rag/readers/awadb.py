@@ -12,7 +12,7 @@ class AwadbReader(BaseReader):
     """Awadb reader.
 
     Retrieves documents through an existing awadb client.
-    These documents can then be used in a downstream LyzrRag data structure.
+    These documents can then be used in a downstream LlamaIndex data structure.
 
     Args:
         client (awadb.client): An awadb client.

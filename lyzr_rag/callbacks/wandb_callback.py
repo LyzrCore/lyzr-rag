@@ -553,10 +553,10 @@ class WandbCallbackHandler(BaseCallbackHandler):
     def _print_wandb_init_message(self, run_url: str) -> None:
         """Print a message to the terminal when W&B is initialized."""
         self._wandb.termlog(
-            f"Streaming LyzrRag events to W&B at {run_url}\n"
+            f"Streaming LlamaIndex events to W&B at {run_url}\n"
             "`WandbCallbackHandler` is currently in beta.\n"
             "Please report any issues to https://github.com/wandb/wandb/issues "
-            "with the tag `lyzrrag`."
+            "with the tag `lyzr_rag`."
         )
 
     def _print_upload_index_fail_message(self, e: Exception) -> None:

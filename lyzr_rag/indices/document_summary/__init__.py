@@ -1,6 +1,5 @@
 """Document summary index."""
 
-
 from lyzr_rag.indices.document_summary.base import (
     DocumentSummaryIndex,
     GPTDocumentSummaryIndex,

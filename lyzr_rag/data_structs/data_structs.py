@@ -20,7 +20,7 @@ Node = TextNode
 
 @dataclass
 class IndexStruct(DataClassJsonMixin):
-    """A base data struct for a LyzrRag."""
+    """A base data struct for a LlamaIndex."""
 
     index_id: str = field(default_factory=lambda: str(uuid.uuid4()))
     summary: Optional[str] = None

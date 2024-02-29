@@ -1,6 +1,5 @@
 """Vector stores."""
 
-
 from lyzr_rag.vector_stores.astra import AstraDBVectorStore
 from lyzr_rag.vector_stores.awadb import AwaDBVectorStore
 from lyzr_rag.vector_stores.azureaisearch import (

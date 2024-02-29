@@ -1,6 +1,5 @@
 """Common classes/functions for tree index operations."""
 
-
 import asyncio
 import logging
 from typing import Dict, List, Optional, Sequence, Tuple

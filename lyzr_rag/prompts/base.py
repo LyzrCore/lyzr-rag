@@ -446,7 +446,7 @@ class LangchainPromptTemplate(BasePromptTemplate):
         from lyzr_rag.llms.langchain import LangChainLLM
 
         if llm is not None:
-            # if lyzrrag LLM is provided, and we require a langchain LLM,
+            # if lyzr_rag LLM is provided, and we require a langchain LLM,
             # then error. but otherwise if `requires_langchain_llm` is False,
             # then we can just use the default prompt
             if not isinstance(llm, LangChainLLM) and self.requires_langchain_llm:
@@ -470,7 +470,7 @@ class LangchainPromptTemplate(BasePromptTemplate):
         from lyzr_rag.llms.langchain_utils import from_lc_messages
 
         if llm is not None:
-            # if lyzrrag LLM is provided, and we require a langchain LLM,
+            # if lyzr_rag LLM is provided, and we require a langchain LLM,
             # then error. but otherwise if `requires_langchain_llm` is False,
             # then we can just use the default prompt
             if not isinstance(llm, LangChainLLM) and self.requires_langchain_llm:
@@ -492,7 +492,7 @@ class LangchainPromptTemplate(BasePromptTemplate):
         from lyzr_rag.llms.langchain import LangChainLLM
 
         if llm is not None:
-            # if lyzrrag LLM is provided, and we require a langchain LLM,
+            # if lyzr_rag LLM is provided, and we require a langchain LLM,
             # then error. but otherwise if `requires_langchain_llm` is False,
             # then we can just use the default prompt
             if not isinstance(llm, LangChainLLM) and self.requires_langchain_llm:

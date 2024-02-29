@@ -3,6 +3,7 @@
 An index that is built with Tencent Vector Database.
 
 """
+
 import json
 from typing import Any, Dict, List, Optional
 

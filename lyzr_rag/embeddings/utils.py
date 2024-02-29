@@ -1,4 +1,4 @@
-"""Embedding utils for LyzrRag."""
+"""Embedding utils for LlamaIndex."""
 
 import os
 from typing import TYPE_CHECKING, List, Optional, Union
@@ -56,7 +56,7 @@ def resolve_embed_model(embed_model: Optional[EmbedType] = None) -> BaseEmbeddin
                 f"{e!s}"
                 "\nConsider using embed_model='local'.\n"
                 "Visit our documentation for more embedding options: "
-                "https://docs.lyzrrag.ai/en/stable/module_guides/models/"
+                "https://docs.lyzr.ai/"
                 "embeddings.html#modules"
                 "\n******"
             )

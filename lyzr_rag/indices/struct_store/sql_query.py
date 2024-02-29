@@ -1,4 +1,5 @@
 """Default query for SQLStructStoreIndex."""
+
 import logging
 from abc import abstractmethod
 from typing import Any, Dict, List, Optional, Tuple, Union, cast

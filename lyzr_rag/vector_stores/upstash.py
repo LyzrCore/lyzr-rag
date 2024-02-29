@@ -5,6 +5,7 @@ An index that is built with Upstash Vector.
 
 https://upstash.com/docs/vector/overall/getstarted
 """
+
 import logging
 from typing import Any, List
 

@@ -13,7 +13,7 @@ from lyzr_rag.utilities.sql_wrapper import SQLDatabase
 class DatabaseReader(BaseReader):
     """Simple Database reader.
 
-    Concatenates each row into Document used by LyzrRag.
+    Concatenates each row into Document used by LlamaIndex.
 
     Args:
         sql_database (Optional[SQLDatabase]): SQL database to use,

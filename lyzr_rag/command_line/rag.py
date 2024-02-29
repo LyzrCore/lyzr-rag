@@ -239,22 +239,22 @@ class RagCLI(BaseModel):
                     elif len(stored_paths) > 1:
                         print(
                             "Multiple files or folders were ingested, which is not supported by create-llama. "
-                            "Please call `lyzrrag-cli rag --clear` to clear the cache first, "
-                            "then call `lyzrrag-cli rag --files` again with a single folder or file"
+                            "Please call `lyzr_rag-cli rag --clear` to clear the cache first, "
+                            "then call `lyzr_rag-cli rag --files` again with a single folder or file"
                         )
                     else:
                         path = stored_paths.pop()
                         if "*" in path:
                             print(
                                 "Glob pattern is not supported by create-llama. "
-                                "Please call `lyzrrag-cli rag --clear` to clear the cache first, "
-                                "then call `lyzrrag-cli rag --files` again with a single folder or file."
+                                "Please call `lyzr_rag-cli rag --clear` to clear the cache first, "
+                                "then call `lyzr_rag-cli rag --files` again with a single folder or file."
                             )
                         elif not os.path.exists(path):
                             print(
                                 f"The path {path} does not exist. "
-                                "Please call `lyzrrag-cli rag --clear` to clear the cache first, "
-                                "then call `lyzrrag-cli rag --files` again with a single folder or file."
+                                "Please call `lyzr_rag-cli rag --clear` to clear the cache first, "
+                                "then call `lyzr_rag-cli rag --files` again with a single folder or file."
                             )
                         else:
                             print(f"Calling create-llama using data from {path} ...")
@@ -346,7 +346,7 @@ class RagCLI(BaseModel):
         )
         parser.add_argument(
             "--create-llama",
-            help="Create a LyzrRag application with your embedded data.",
+            help="Create a LlamaIndex application with your embedded data.",
             required=False,
             action="store_true",
         )
@@ -358,7 +358,7 @@ class RagCLI(BaseModel):
         """
         Entrypoint for CLI tool.
         """
-        parser = ArgumentParser(description="LyzrRag RAG Q&A tool.")
+        parser = ArgumentParser(description="LlamaIndex RAG Q&A tool.")
         subparsers = parser.add_subparsers(
             title="commands", dest="command", required=True
         )

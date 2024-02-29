@@ -3,6 +3,7 @@
 An index that is built within Milvus.
 
 """
+
 import logging
 from typing import Any, Dict, List, Optional, Union
 

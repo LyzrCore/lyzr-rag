@@ -3,6 +3,7 @@
 An index that is built on top of a managed service.
 
 """
+
 from abc import ABC, abstractmethod
 from typing import Any, Dict, Optional, Sequence, Type
 

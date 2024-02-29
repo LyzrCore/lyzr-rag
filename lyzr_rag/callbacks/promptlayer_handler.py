@@ -6,8 +6,8 @@ from lyzr_rag.callbacks.base_handler import BaseCallbackHandler
 from lyzr_rag.callbacks.schema import CBEventType, EventPayload
 from lyzr_rag.llms import ChatMessage
 
-PROMPT_LAYER_CHAT_FUNCTION_NAME = "lyzrrag.chat.openai"
-PROMPT_LAYER_COMPLETION_FUNCTION_NAME = "lyzrrag.completion.openai"
+PROMPT_LAYER_CHAT_FUNCTION_NAME = "lyzr_rag.chat.openai"
+PROMPT_LAYER_COMPLETION_FUNCTION_NAME = "lyzr_rag.completion.openai"
 
 
 class PromptLayerHandler(BaseCallbackHandler):

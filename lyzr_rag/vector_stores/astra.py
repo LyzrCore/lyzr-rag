@@ -5,6 +5,7 @@ An index based on a DB table with vector search capabilities,
 powered by the astrapy library
 
 """
+
 import json
 import logging
 from typing import Any, Dict, List, Optional, cast

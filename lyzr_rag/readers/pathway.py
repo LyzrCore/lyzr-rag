@@ -16,8 +16,8 @@ class PathwayReader(BaseReader):
         port (str | int): The port number on which Pathway is listening.
 
     See Also:
-        lyzrrag.retriever.pathway.PathwayRetriever and,
-        lyzrrag.retriever.pathway.PathwayVectorServer
+        lyzr_rag.retriever.pathway.PathwayRetriever and,
+        lyzr_rag.retriever.pathway.PathwayVectorServer
     """
 
     def __init__(self, host: str, port: Union[str, int]):

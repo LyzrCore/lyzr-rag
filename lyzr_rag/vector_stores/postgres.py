@@ -210,7 +210,7 @@ class PGVectorStore(BasePydanticVectorStore):
         database: Optional[str] = None,
         user: Optional[str] = None,
         password: Optional[str] = None,
-        table_name: str = "lyzrrag",
+        table_name: str = "lyzr_rag",
         schema_name: str = "public",
         connection_string: Optional[str] = None,
         async_connection_string: Optional[str] = None,

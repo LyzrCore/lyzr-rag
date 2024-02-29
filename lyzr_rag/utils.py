@@ -309,8 +309,8 @@ def get_cache_dir() -> str:
     and create it if it doesn't yet exist.
     """
     # User override
-    if "lyzr_rag_CACHE_DIR" in os.environ:
-        path = Path(os.environ["lyzr_rag_CACHE_DIR"])
+    if "LLAMA_INDEX_CACHE_DIR" in os.environ:
+        path = Path(os.environ["LLAMA_INDEX_CACHE_DIR"])
 
     # Linux, Unix, AIX, etc.
     elif os.name == "posix" and sys.platform != "darwin":
@@ -360,7 +360,7 @@ How do we best augment LLMs with our own private data?
 We need a comprehensive toolkit to help perform this data augmentation for LLMs.
 
 Proposed Solution
-That's where LyzrRag comes in. LyzrRag is a "data framework" to help
+That's where LlamaIndex comes in. LlamaIndex is a "data framework" to help
 you build LLM  apps. It provides the following tools:
 
 Offers data connectors to ingest your existing data sources and data formats
@@ -371,14 +371,14 @@ Provides an advanced retrieval/query interface over your data:
 Feed in any LLM input prompt, get back retrieved context and knowledge-augmented output.
 Allows easy integrations with your outer application framework
 (e.g. with LangChain, Flask, Docker, ChatGPT, anything else).
-LyzrRag provides tools for both beginner users and advanced users.
-Our high-level API allows beginner users to use LyzrRag to ingest and
+LlamaIndex provides tools for both beginner users and advanced users.
+Our high-level API allows beginner users to use LlamaIndex to ingest and
 query their data in 5 lines of code. Our lower-level APIs allow advanced users to
 customize and extend any module (data connectors, indices, retrievers, query engines,
 reranking modules), to fit their needs.
 """
 
-_lyzr_rag_COLORS = {
+_LLAMA_INDEX_COLORS = {
     "llama_pink": "38;2;237;90;200",
     "llama_blue": "38;2;90;149;237",
     "llama_turquoise": "38;2;11;159;203",
@@ -397,22 +397,22 @@ _ANSI_COLORS = {
 
 
 def get_color_mapping(
-    items: List[str], use_lyzr_rag_colors: bool = True
+    items: List[str], use_llama_index_colors: bool = True
 ) -> Dict[str, str]:
     """
     Get a mapping of items to colors.
 
     Args:
         items (List[str]): List of items to be mapped to colors.
-        use_lyzr_rag_colors (bool, optional): Flag to indicate
-        whether to use LyzrRag colors or ANSI colors.
+        use_llama_index_colors (bool, optional): Flag to indicate
+        whether to use LlamaIndex colors or ANSI colors.
             Defaults to True.
 
     Returns:
         Dict[str, str]: Mapping of items to colors.
     """
-    if use_lyzr_rag_colors:
-        color_palette = _lyzr_rag_COLORS
+    if use_llama_index_colors:
+        color_palette = _LLAMA_INDEX_COLORS
     else:
         color_palette = _ANSI_COLORS
 
@@ -431,7 +431,7 @@ def _get_colored_text(text: str, color: str) -> str:
     Returns:
         str: Colored version of the input text.
     """
-    all_colors = {**_lyzr_rag_COLORS, **_ANSI_COLORS}
+    all_colors = {**_LLAMA_INDEX_COLORS, **_ANSI_COLORS}
 
     if color not in all_colors:
         return f"\033[1;3m{text}\033[0m"  # just bolded and italicized

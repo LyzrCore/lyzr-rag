@@ -1,4 +1,5 @@
 """Default query for EmptyIndex."""
+
 from typing import Any, List, Optional
 
 from lyzr_rag.callbacks.base import CallbackManager

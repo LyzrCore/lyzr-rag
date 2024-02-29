@@ -1,6 +1,5 @@
 """Base vector store index query."""
 
-
 from typing import Any, Dict, List, Optional
 
 from lyzr_rag.callbacks.base import CallbackManager
@@ -144,11 +143,9 @@ class VectorIndexRetriever(BaseRetriever):
                 ):
                     node_id = query_result.nodes[i].node_id
                     if self._docstore.document_exists(node_id):
-                        query_result.nodes[
-                            i
-                        ] = self._docstore.get_node(  # type: ignore[index]
+                        query_result.nodes[i] = self._docstore.get_node(
                             node_id
-                        )
+                        )  # type: ignore[index]
 
         log_vector_store_query_result(query_result)
 

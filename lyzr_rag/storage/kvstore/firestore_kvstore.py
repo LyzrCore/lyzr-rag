@@ -15,7 +15,7 @@ SLASH_REPLACEMENT = "_"
 IMPORT_ERROR_MSG = (
     "`firestore` package not found, please run `pip3 install google-cloud-firestore`"
 )
-USER_AGENT = "LyzrRag"
+USER_AGENT = "LlamaIndex"
 DEFAULT_FIRESTORE_DATABASE = "(default)"
 
 

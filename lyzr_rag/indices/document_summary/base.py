@@ -1,6 +1,6 @@
 """Document summary index.
 
-A data structure where LyzrRag stores the summary per document, and maps
+A data structure where LlamaIndex stores the summary per document, and maps
 the summary to the underlying Nodes.
 This summary can be used for retrieval.
 
