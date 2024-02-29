@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="lyzr-rag",
-    version="0.1.0",
+    version="0.1.1",
     author="Lyzr",
     author_email="contact@lyzr.ai",
     description="Lyzr Core",

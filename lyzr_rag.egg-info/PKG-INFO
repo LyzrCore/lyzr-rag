@@ -1,13 +1,13 @@
 Metadata-Version: 2.1
 Name: lyzr-rag
-Version: 0.1.0
+Version: 0.1.1
 Summary: Lyzr Core
 Home-page: https://lyzr.ai
 Author: Lyzr
 Author-email: contact@lyzr.ai
 License: MIT
 Project-URL: Documentation, https://docs.lyzr.ai/
-Project-URL: Source, https://github.com/Lyzr-core/lyzr_rag
+Project-URL: Source, https://github.com/LyzrCore/lyzr_rag
 Requires-Python: >=3.8.1,<4.0
 Description-Content-Type: text/markdown
 License-File: LICENSE
