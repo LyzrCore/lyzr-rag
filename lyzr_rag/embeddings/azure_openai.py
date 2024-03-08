@@ -1,18 +1,17 @@
 from typing import Any, Dict, Optional
 
 import httpx
-from openai import AsyncAzureOpenAI, AzureOpenAI
-
 from lyzr_rag.bridge.pydantic import Field, PrivateAttr, root_validator
 from lyzr_rag.callbacks.base import CallbackManager
 from lyzr_rag.constants import DEFAULT_EMBED_BATCH_SIZE
+from lyzr_rag.llms.generic_utils import get_from_param_or_env
 from lyzr_rag.embeddings.openai import (
     OpenAIEmbedding,
     OpenAIEmbeddingMode,
     OpenAIEmbeddingModelType,
 )
-from lyzr_rag.llms.generic_utils import get_from_param_or_env
-from lyzr_rag.llms.openai_utils import resolve_from_aliases
+from lyzr_rag.llms.azure_openai import resolve_from_aliases
+from openai import AsyncAzureOpenAI, AzureOpenAI
 
 
 class AzureOpenAIEmbedding(OpenAIEmbedding):
@@ -21,6 +20,11 @@ class AzureOpenAIEmbedding(OpenAIEmbedding):
     )
     azure_deployment: Optional[str] = Field(
         default=None, description="The Azure deployment to use."
+    )
+
+    api_base: str = Field(default="", description="The base URL for Azure deployment.")
+    api_version: str = Field(
+        default="", description="The version for Azure OpenAI API."
     )
 
     _client: AzureOpenAI = PrivateAttr()

@@ -34,7 +34,7 @@ name = "lyzr-rag"
 packages = [{include = "lyzr_rag"}]
 readme = "README.md"
 repository = "https://github.com/Lyzrcore/lyzr-rag"
-version = "0.1.4"
+version = "0.1.5"
 
 [tool.poetry.dependencies]
 SQLAlchemy = {extras = ["asyncio"], version = ">=1.4.49"}
