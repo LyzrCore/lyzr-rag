@@ -16,6 +16,17 @@ class YoutubeTranscriptReader(BasePydanticReader):
     def class_name(cls) -> str:
         return "YoutubeTranscriptReader"
 
+    @staticmethod
+    def _get_video_id(link: str) -> str:
+        if "youtu.be" in link: # link is youtu.be/<video_id> variant
+            route = link.split("youtu.be/")[1]
+            id = route.split("?si=")[0]
+            return id
+        else: # link is youtube.com/watch?v=<video_id> variant 
+            id = link.split("?v=")[-1]
+            return id
+
+
     def load_data(self, ytlinks: List[str], **load_kwargs: Any) -> List[Document]:
         """Load data from the input links.
 
@@ -34,7 +45,7 @@ class YoutubeTranscriptReader(BasePydanticReader):
 
         results = []
         for link in ytlinks:
-            video_id = link.split("?v=")[-1]
+            video_id = YoutubeTranscriptReader._get_video_id(link)
             srt = YouTubeTranscriptApi.get_transcript(
                 video_id, languages=self.languages
             )
